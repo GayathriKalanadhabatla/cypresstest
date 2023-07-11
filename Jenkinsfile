@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent    { 
+    docker {
+      image 'cypress/base:18.14.1'
+    }
+  }
+
 
   stages {
     stage('build and test') {
