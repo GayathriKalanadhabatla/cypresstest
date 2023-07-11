@@ -10,7 +10,7 @@ pipeline {
     stage('build and test') {
       steps {
         sh 'npm ci'
-        sh 'npx cypress run --browser chrome --spec "cypress/e2e/test.cy.js"'
+        sh 'npx cypress run --spec "cypress/e2e/test.cy.js"'
       }
     }
   }
