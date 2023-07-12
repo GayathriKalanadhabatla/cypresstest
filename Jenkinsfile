@@ -10,7 +10,7 @@ pipeline {
     stage('build and test') {
       steps {
         sh 'npm ci'
-        sh 'npx cypress run --spec "cypress/e2e/test.cy.js"'
+        sh 'npx cypress NO_COLOR=1 cypress run --spec "cypress/e2e/test.cy.js"'
       }
     }
   }
